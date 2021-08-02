@@ -1,0 +1,72 @@
+<html>
+<title>
+猜猜我是誰
+</title>
+<script>
+var sc=0;
+var pic=["人腳","大象腳","長頸鹿腳","獅子腳","北極熊腳","企鵝腳","斑馬腳","豬腳","鴨腳","鱷魚腳"];
+var ans=["人","大象","長頸鹿","獅子","北極熊","企鵝","斑馬","豬","鴨","鱷魚"];
+var fal=["猴子","老虎","無尾熊","鹿","狗","貓","綿羊","蜥蜴","豹","老鼠"];
+function change(){
+ var x,i;
+ for(i=0;i<9;i++){
+ var y=parseInt(Math.random()*10);
+ x=ans[i];
+ ans[i]=ans[y];
+ ans[y]=x;
+ x=pic[i];
+ pic[i]=pic[y];
+ pic[y]=x;
+ x=fal[i];
+ fal[i]=fal[y];
+ fal[y]=x;
+ }
+ document.getElementById('aa').innerHTML="<img src="+pic[0]+".jpg height=200 width=200"+">";
+ document.getElementById('bb').innerHTML="<img src="+pic[1]+".jpg height=200 width=200"+">";
+ document.getElementById('cc').innerHTML="<img src="+pic[2]+".jpg height=200 width=200"+">";
+ document.getElementById('dd').innerHTML="<img src="+pic[3]+".jpg height=200 width=200"+">";
+ document.getElementById('aa1').innerHTML="<button onclick='score();this.disabled=true;'>"+ans[0]+"</button>";
+ document.getElementById('bb1').innerHTML="<button onclick='score();this.disabled=true;'>"+ans[1]+"</button>";
+ document.getElementById('cc1').innerHTML="<button onclick='score();this.disabled=true;'>"+ans[2]+"</button>";
+ document.getElementById('dd1').innerHTML="<button onclick='score();this.disabled=true;'>"+ans[3]+"</button>";
+ document.getElementById('aa2').innerHTML="<button onclick='wrong();'>"+fal[0]+"</button><br>";
+ document.getElementById('bb2').innerHTML="<button onclick='wrong();'>"+fal[1]+"</button>";
+ document.getElementById('cc2').innerHTML="<button onclick='wrong();'>"+fal[2]+"</button>";
+ document.getElementById('dd2').innerHTML="<button onclick='wrong();'>"+fal[3]+"</button><br>";
+ }
+ function score(){
+ sc++;
+ document.getElementById('sc').innerHTML="<font color=red size=5>分數:"+sc+"</font>";
+ }
+ function re(){
+ sc=0;
+ document.getElementById('sc').innerHTML="<font color=red size=5>分數:"+sc+"</font>";
+ }
+ function wrong(){
+ alert("錯了!");
+ }
+</script>
+<body background=bg1.jpg onload="change();">
+<center><font size=7 color=green>猜猜是誰的腳</font></center><hr>
+<center>
+第一題<br>
+<span id="aa"></span><br>
+<span id=aa1></span>
+<span id=aa2></span>
+第二題<br>
+<span id="bb"></span><br>
+<span id=bb2></span>
+<span id=bb1></span><br>
+第三題<br>
+<span id="cc"></span><br>
+<span id=cc2></span>
+<span id=cc1></span><br>
+第四題<br>
+<span id="dd"></span><br>
+<span id=dd1></span>
+<span id=dd2></span><br>
+<p id="sc"><font color=red size=5>分數:0</font></p>
+<button onclick="change();re();"><font size=4>再玩一次</font></button><br>
+<a href=1-1.html>回到原本章節</a>
+<a href=首頁.html>回到首頁</a>
+<a href=1-2.html>前往下個章節</a>

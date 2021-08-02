@@ -1,0 +1,77 @@
+<html>
+<script>
+var sc=0;
+function showsc(res)
+{
+ if (res==1)
+  document.getElementById('score').innerHTML='<img src=o.jpg width=100 height=100>score:<font color=blue>'+sc+'分</font>';
+ else
+  document.getElementById('score').innerHTML='<img src=x.png width=100 height=100>score:<font color=red>'+sc+'分</font>';
+}
+function tip1(){
+ document.getElementById('aa').innerHTML="<img src=樹懶.jpg height=200 width=300>";
+ }
+function tip2(){
+ document.getElementById('aa').innerHTML="<img src=臘腸.jpg height=200 width=300>";
+ }
+function tip3(){
+ document.getElementById('aa').innerHTML="<img src=企鵝.jpg height=300 width=200>";
+ }
+function tip4(){
+ document.getElementById('aa').innerHTML="沒有提示喔!";
+ }
+function tip5(){
+ document.getElementById('aa').innerHTML="<img src=蚊子.jpg height=200 width=200><img src=螞蟻.png height=200 width=200><img src=蟑螂.jpg height=200 width=200>它們可能是某種昆蟲、動物的食物";
+ }
+function tip6(){
+ document.getElementById('aa').innerHTML="看看你自己!";
+ }
+</script>
+<body background=bg1.jpg>
+<font size=6>1.具有生命、能自發運動的樹懶是動物的一種</font>
+<button onclick='tip1();'>提示</button>
+<br>
+<button onclick='sc++;alert("correct! score:"+sc+"分");this.disabled=true;showsc(1);'>O</button>
+&nbsp;&nbsp;
+<button onclick='alert("incorrect!");showsc(0);'>X</button>
+<br>
+<font size=6>2.品種的不同都是自然演化而來的</font>
+<button onclick='tip2();'>提示</button>
+<br>
+<button onclick='alert("incorrect!");showsc(0);'>O</button>
+&nbsp;&nbsp;
+<button onclick='sc++;alert("correct! score:"+sc+"分");this.disabled=true;showsc(1);'>X</button>
+<br>
+<font size=6>3.能夠飛行的動物才能夠被稱作鳥類</font>
+<button onclick='tip3();'>提示</button>
+<br>
+<button onclick='alert("incorrect!");showsc(0);'>O</button>
+&nbsp;&nbsp;
+<button onclick='sc++;alert("correct! score:"+sc+"分");this.disabled=true;showsc(1);'>X</button>
+<br>
+<font size=6>4.昆蟲在所有已知的動物中大約佔了一半左右</font>
+<button onclick='tip4();'>提示</button>
+<br>
+<button onclick='alert("incorrect!");showsc(0);'>O</button>
+&nbsp;&nbsp;
+<button onclick='sc++;alert("correct! score:"+sc+"分");this.disabled=true;showsc(1);'>X</button>
+<br>
+<font size=6>5.人類眼中的害蟲，對大自然卻可能很重要</font>
+<button onclick='tip5();'>提示</button>
+<br>
+<button onclick='sc++;alert("correct! score:"+sc+"分");this.disabled=true;showsc(1);'>O</button>
+&nbsp;&nbsp;
+<button onclick='alert("incorrect!");showsc(0);'>X</button>
+<br>
+<font size=6>6.人類不能和動物相提並論，因為人就是人、不是動物</font>
+<button onclick='tip6();'>提示</button>
+<br>
+<button onclick='alert("incorrect!");showsc(0);'>O</button>
+&nbsp;&nbsp;
+<button onclick='sc++;alert("correct! score:"+sc+"分");this.disabled=true;showsc(1);'>X</button>
+<br>
+<p id='score'>score:0分</p>
+提示:
+<span id="aa"></span>
+</body>
+</html>

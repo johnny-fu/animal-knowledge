@@ -1,0 +1,66 @@
+﻿<html>
+<script>
+var pic=["人類演進1.jpg height=200 width=150","人類演進2.jpg height=200 width=150","人類演進3.jpg height=200 width=150","人類演進4.jpg height=200 width=150","人類演進5.jpg height=200 width=150","人類演進6.jpg height=200 width=150"];
+var count=0;
+var t;
+function ap(){
+  t=setInterval("plus()",2000); 
+}
+function plus(){
+  count++;
+   if(count>5)
+    count=0;
+}
+function alter(){
+  window.document.getElementById('aa').innerHTML="<img src="+pic[count]+">";
+}
+function playalter(){
+   t=setInterval("alter()",1000);
+}
+</script>
+<title>
+我們與動物的距離
+</title>
+
+<body background=bg2.jpg onload="ap();alter();playalter();">
+<center><font color=blue size=7>我們與動物的距離</font></center><br><br><br>
+<center>
+人類在地球上生活了很長一段時間 - 我們同樣作為動物的一種，究竟有什麼特性呢?<br><br><br>
+<table>
+<tr>
+<td>
+1.我們和其他動物之間的差別是?<br>
+人類跟動物最大的區別，就在於人類會運用語言文字，動物也有語言，<br>
+動物之間的溝通是僅止於情緒的溝通而已，人類的語言，除了情緒的溝通之外，還是一種符號。<br>
+但大多數方面，人類和其他動物的相似之處比比皆是。因此，我們要懂得善待並尊重其他生命。
+</td>
+<td>
+<img src=人與人溝通.png height=150 width=200>
+</td>
+</tr>
+<tr>
+<td>
+2.人類是怎麼出現的?<br>
+科學家們估計，人類大約在距今500萬到700萬年之間，從他們與黑猩猩的共同祖先中分支出來，<br>
+至於確切的起源地點則眾說紛紜。<br>
+古代的猿類經過長時間的發展學會使用工具、種植、甚至是發展文字和語言，才漸漸變成我們現在的樣子。
+</td>
+<td>
+<span id="aa"><span>
+</td>
+</tr>
+<tr>
+<td>
+3.如果其他動物們都消失，人類會發生什麼事?<br>
+我們會喪失其中一個重要的食物來源、許多人會失去工作、孤獨的人們也會失去陪伴自己的寵物，<br>
+最重要的是許多大自然內的平衡將會被打破而難以維持其生態，<br>
+仰賴昆蟲的花草將會死亡，而不用多久人類的存續也會面臨一大挑戰。
+</td>
+</tr>
+</table>
+<br><br><br><br><br><br>
+<a href=1-3.html>前往上個個章節</a>
+<a href=index.html>回到首頁</a>
+<a href=測驗.html target="_blank">前往測驗</a>
+</body>
+</html>	

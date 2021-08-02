@@ -1,0 +1,32 @@
+﻿<html>
+<title>
+外貌大不同
+</title>
+
+<body background=bg2.jpg>
+<center><font size=7 color=green>外貌大不同</font></center><center>
+<font size=5>哪張是綿羊呢?(請點選圖片)</font><br>
+<button onclick="ture();"><img src="綿羊.jpg" width=300 height=300></button>
+<button onclick="fals();"><img src="山羊.jpg" width=500 height=300></button><br>
+<p id="aa"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>
+<button onclick="starttest();"><a href=遊戲.html target="_blank"><font size=6 color=green>來玩遊戲吧!</font></a></button><br>
+<a href=index.html>回到首頁</a>
+<a href=1-2.html>前往下個章節</a>
+<script>
+var explain="<table><tr><td>綿羊與山羊雖然同稱為羊，但他們是同科而不同屬的動物，綿羊和山羊之間是不能交配生產小羊的。<br>1.性情:綿羊遲鈍，山羊靈活；但綿羊羔比山羊羔膽小，驚嚇後快速逃竄。<br>2.叫聲:綿羊叫聲為baa，山羊叫聲為Maa。<br>3.角:大部分綿羊無角，僅少數有角；而大部分山羊有角，僅少數無角。<br>4.毛:綿羊毛柔軟、富彈性、油脂多及捲曲；而山羊毛粗剛，缺彈性和油脂。<br>5.臉形:綿羊弓狀、中央圓突、鼻型較大;山羊臉部較平。<br>6.蹄:山羊蹄為中空，海棉狀;綿羊蹄厚而實心。<br>";
+var question="<br>有沒有想過是什麼原因讓它們擁有這麼多不同的地方?<br>答案就是環境!動物身上的每一個特徵都是為了適應不同的居住環境而產生的，<br>飛翔在空中的鳥類有與生俱來的翅膀以及為了啄食昆蟲而生的喙，<br>水中的魚長有堅硬的鱗片以及呼吸用的鰓，就是這個道理!<br>接下來再看看幾個不同的例子吧!</td></tr></table><br><br><br>";
+var owl="<table><tr><td><img src=禿鷹.jpg width=400 height=300></td><td><img src=貓頭鷹.jpg width=300 height=300></td></tr><tr><td><font size=5><center>禿鷹</center></font></td><td><font size=5><center>貓頭鷹</center></font></td></tr><tr><td colspan=2>居住在大型莽林草原、以腐肉為食的禿鷹，具有較大的體型以及避免沾染血液的無毛頭部；<br>而居住在茂密森林、專門在夜晚獵食的貓頭鷹，則擁有銳利的大眼以及靈活的頸部。</td></tr></table><br><br><br>";
+var turtle="<table><tr><td><img src=陸龜.jpg width=300 height=300></td><td><img src=海龜.jpg width=400 height=300></td></tr><tr><td><font size=5><center>陸龜</center></font></td><td><font size=5><center>海龜</center></font></td></tr><tr><td colspan=2>至於陸龜和海龜的差異則更為明顯，牠們的足部反映了牠們不同的生長環境，<br>陸龜有支撐厚重身軀的粗壯象腳、海龜的四肢則是為了游泳而生。</td></tr></table>"
+function ture(){
+ document.getElementById("aa").innerHTML = "<font color=green>答對了</font><br>" + explain+question+owl+turtle;
+ }
+function fals(){
+ document.getElementById("aa").innerHTML = "<font color=red>答錯了喔!要仔細看它們的差異!</font><br>" + explain+question+owl+turtle;
+ }
+function starttest(){
+ alert("測驗要開始囉!!");
+ 
+ }
+</script>
+</body>
+</html>

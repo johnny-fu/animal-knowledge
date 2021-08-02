@@ -1,0 +1,127 @@
+﻿<html>
+<title>
+昆蟲大世界
+</title>
+<script>
+var pic=["昆蟲1.jpg height=200 width=200","昆蟲2.jpg height=200 width=200","動物1.jpg height=200 width=200","動物2.jpg height=200 width=200"];
+var arr=["<font color=red>昆蟲<font>?","<font color=green>動物?</font>","<font color=red>昆蟲?</font>","<font color=green>動物?</font>"];
+var count=0;
+var t;
+function ap(){
+  t=setInterval("plus()",2000); 
+}
+function plus(){
+  count++;
+   if(count>3)
+    count=0;
+}
+function alter(){
+  window.document.getElementById('aa').innerHTML="<img src="+pic[count]+">";
+  window.document.getElementById('bb').innerHTML=arr[count];
+}
+function playalter(){
+   t=setInterval("alter()",1000);
+}
+function hide1(){
+ document.getElementById('cc').innerHTML="<img src=黑.jpg height=200 width=200>";
+}
+function hide2(){
+ document.getElementById('dd').innerHTML="<img src=黑.jpg height=200 width=200>";
+}
+function change(){
+ document.getElementById('aaa').innerHTML="<p id='bbb'>單眼<button onclick='change2();'>點此開啟圖片</button></p>";
+}
+function change2(){
+ document.getElementById('bbb').innerHTML="<p id='aaa'>單眼<button onclick='hide1(),change();'>點此隱蔽圖片</button></p>";
+ document.getElementById('cc').innerHTML="<img src=單眼.jpg height=200 width=200>";
+}
+function change3(){
+ document.getElementById('ccc').innerHTML="<p id='ddd'>複眼<button onclick='change4();'>點此開啟圖片</button></p>";
+}
+function change4(){
+ document.getElementById('ddd').innerHTML="<p id='ccc'>複眼<button onclick='hide2(),change3();'>點此隱蔽圖片</button></p>";
+ document.getElementById('dd').innerHTML="<img src=複眼.jpg height=200 width=200>";
+}
+</script>
+<body background=bg2.jpg onload="ap();alter();playalter();">
+<center><font size=7 color=purple>昆蟲大世界</font><br><br><br>
+在全世界已知的動物當中，昆蟲就佔了足足75%到80%!就讓我們來稍微認識牠們吧!
+<br><br><br>
+<table>
+<tr>
+<td>
+1.昆蟲和其他動物有什麼不同?<br>
+其實昆蟲就是動物，但動物卻不是昆蟲<br>
+動物有分脊索動物門，刺絲胞動物門，棘皮動物門，節肢動物門等等...<br>
+蜘蛛跟昆蟲都是節肢動物門，因為他們以分節，也有附肢，有外殼，<br>
+但是節肢動物門又有分許多綱，有昆蟲綱，蛛型綱等等...<br>
+所以最簡單的原則是，昆蟲有三對步足〈六隻腳〉，且昆蟲有頭胸腹。
+</td>
+<td>
+<p id='aa'>aa</p>
+</td>
+</tr>
+<tr>
+<td></td>
+<td><center>
+<p id='bb'>bb</p></center>
+</td>
+</tr>
+<tr>
+<td>
+2.為什麼昆蟲的眼睛長得這麼特別?<br>
+所有昆蟲都有複眼，大多數昆蟲除了複眼外還有單眼。<br>
+單眼用來辨別光線的存在和強弱、方向；複眼能辨識物體的形態和顏色，<br>
+但昆蟲所見的顏色和人類不一樣，對於顏色的分辨也隨著種類不同有所差異，<br>
+一般昆蟲看不到紅色，蜜蜂不能辨識紅色和綠色。而人類看不到的紫外光，<br>
+對大多數昆蟲來說，卻是最耀眼的光線，<br>
+在昏暗的光源下，昆蟲眼中的顏色會變得非常豐富。
+</td>
+<td>
+<p id="cc"><img src=單眼.jpg height=200 width=200></p>
+</td>
+<td>
+<p id="dd"><img src=複眼.jpg height=200 width=200></p>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td><center>
+<p id="aaa">單眼<button onclick="hide1(),change();">點此隱蔽圖片</button></p></center>
+</td>
+<td><center>
+<p id="ccc">複眼<button onclick="hide2(),change3();">點此隱蔽圖片</button></center>
+</td>
+<tr>
+<td>
+3.如果蚊子、蟑螂可以消失?<br>
+為了對付蚊子、蟑螂，人們絞盡腦汁，蚊香、蟑螂藥、殺蟲劑、滅蚊燈等，能用的全用上了。<br>
+那麼牠們要是有一天都滅絕了，從地球上消失了，那對於地球生態系統是好事還是壞事呢?<br>
+蚊子、蟑螂已經在地球上生存了上億年，在整個地球生物圈中占據一席之地，<br>
+以牠們為食的那些動物首先會因為蚊子的消失而出現食物短缺被大量餓死，<br>
+而牠們更是大自然重要的清除者，尤其蚊子攜帶病毒的能力雖然對人類來說是困擾、<br>
+卻是大自然調節族群數量的重要工具之一喔!
+</td>
+</tr>
+<tr>
+<td>
+4.昆蟲平常都吃什麼?<br>
+昆蟲能生活在各種不同環境，有各式各樣不同食物內容，有肉食、植食、腐食、雜食等不同食性。<br>
+他們的口器種類很多，即使同樣是肉食性，有的會咀嚼吞食；有的會吸食體液而留下枯乾外殼，<br>
+各式各樣取食的方式，很值得我們細細觀察。<br>
+植食性的昆蟲往往是人類頭痛的對象，<br>
+因為他們可能把人類辛苦栽種的經濟作物當做美食，所以植物病蟲害一直是人類研究的農業重點。<br>
+而肉食性的昆蟲大多以其他昆蟲為食物，也有些兇猛的昆蟲會以小魚、蝌蚪、青蛙為食。<br>
+有些昆蟲食肉也食草，或者兼具植食與腐食，我們則稱這類昆蟲為雜食性昆蟲。
+</td>
+<td>
+<img src=蜜蜂.jpg height=200 width=200>
+</td>
+</tr>
+</table>
+<a href=1-2.html>前往上個章節</a>
+<a href=index.html>回到首頁</a>
+<a href=1-4.html>前往下個章節</a>
+</body>
+</html>
